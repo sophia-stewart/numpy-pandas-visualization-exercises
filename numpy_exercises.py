@@ -10,10 +10,12 @@ len(a[a<0])
 ## 2. How many positive numbers are there?
 # select a where a is greater than 0, display length of that array
 len(a[a>0])
+# a[a>0].size gives number of elements in array
 
 ## 3. How many even positive numbers are there?
 # select a where a>0 and a%2==0, display length of that array
 len(a[(a>0) & (a%2==0)])
+# a[(a>0) & (a%2==0)].shape gives dimensions of array
 
 ## 4. If you were to add 3 to each data point, how many positive numbers would there be?
 # add 3 to each data point
@@ -182,6 +184,7 @@ print(np.shape(b))
 # Exercise 10 - transpose the array b.
 # use numpy transpose function
 np.transpose(b)
+# b.T does same thing
 
 # Exercise 11 - reshape the array b to be a single list of 6 numbers. (1 x 6)
 # use numpy reshape function
@@ -219,6 +222,8 @@ c.var()
 # Exercise 4 - Print out the shape of the array c
 # use numpy shape function
 print(np.shape(c))
+# also works:
+print(c.shape)
 
 # Exercise 5 - Transpose c and print out transposed result.
 # use numpy transpose method, assign to new variable
@@ -274,6 +279,7 @@ np.unique(d)
 # Exercise 7 - Determine how many unique numbers there are in d.
 # find length of array produced by np unique function
 len(np.unique(d))
+# could also use np.unique(d).size
 
 # Exercise 8 - Print out the shape of d.
 # use numpy shape function
@@ -282,8 +288,8 @@ np.shape(d)
 # Exercise 9 - Transpose and then print out the shape of d.
 # traspose using numpy method, assign to new variable
 d_transposed = d.transpose()
-# print transposed array
-print(d_transposed)
+# print transposed array's shape
+print(d_transposed.shape)
 
 # Exercise 10 - Reshape d into an array of 9 x 2
 # use numpy reshape method, specifying new dimensions
